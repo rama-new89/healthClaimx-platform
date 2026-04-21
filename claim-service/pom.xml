@@ -32,6 +32,12 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- H2 Console (for database UI) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-h2</artifactId>
+        </dependency>
+
         <!-- Lombok (for reducing boilerplate code) -->
         <dependency>
             <groupId>org.projectlombok</groupId>

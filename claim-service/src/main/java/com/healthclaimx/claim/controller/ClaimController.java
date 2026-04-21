@@ -8,6 +8,6 @@ public class ClaimController {
     @GetMapping
     public List<Claim> getAllClaims() {
         // Logic to retrieve all claims
-        return null; // Placeholder
+        return "working fine!!"; // Placeholder
     }
 }

@@ -6,8 +6,17 @@ import java.util.List;
 @RequestMapping("/claims")
 public class ClaimController {
     
-    @GetMapping
-    public String test() {
-        return "working fine!!";
+    private final ClaimService claimService;
+    public ClaimController(ClaimService claimService) {
+        this.claimService = claimService;
     }
+    @PostMapping
+    public Claim createClaim(@RequestBody Claim claim) {
+        return claimService.createClaim(claim);
+    }
+    @GetMapping
+    public List<Claim> getAllClaims() {
+        return claimService.getALLClaims();
+    }           
+
 }

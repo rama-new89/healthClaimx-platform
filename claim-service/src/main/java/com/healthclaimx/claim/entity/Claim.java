@@ -1,10 +1,28 @@
 package com.healthclaimx.claim.entity;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name = "claims")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Claim {
-    private Long Id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "user_id", nullable = false)
     private Long userID;
-    private double amount;
-    private String description;
+
+    @Column(name = "amount", nullable = false)
+    private Double amount;
+
+    @Column(name = "status", nullable = false)
     private String status;
-    private String createdAt;   
 }
    

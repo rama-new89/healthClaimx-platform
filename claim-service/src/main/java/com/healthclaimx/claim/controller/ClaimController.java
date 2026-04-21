@@ -10,9 +10,4 @@ public class ClaimController {
         // Logic to retrieve all claims
         return null; // Placeholder
     }
-     @GetMapping
-    public String test() {
-        // Logic to retrieve all claims
-        return "Claim Service Running"; // Placeholder
-    }
 }

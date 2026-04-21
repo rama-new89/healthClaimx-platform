@@ -5,13 +5,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/claims")
 public class ClaimController {
+    
     @GetMapping
-    // public List<Claim> getAllClaims() {
-    //     // Logic to retrieve all claims
-    //     return "working fine!!"; // Placeholder
-    // }
-     public String test() {
-       
-     return "working fine!!"; // Placeholder
+    public String test() {
+        return "working fine!!";
     }
 }

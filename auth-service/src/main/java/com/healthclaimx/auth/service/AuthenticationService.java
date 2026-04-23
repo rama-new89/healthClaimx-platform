@@ -13,29 +13,24 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import java.util.Collections;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.autentication.*;
+import org.springframework.security.authentication.*;
+import org.springframework.security.core.AuthenticationException;
 import com.healthclaimx.auth.security.JwtUtils;
 @Service
 @RequiredArgsConstructor
-public class AuthenticationService
-{ private final AuthenticationManager authenticationManager;
-  private final UserDetailsServiceImpl userDetailsService;;
-  private final JwtUtils jwtUtils;
-  
-  public AuthenticationService(AuthenticationManager authenticationManager, UserDetailsServiceImpl userDetailsService, JwtUtils jwtUtils) {
-    this.authenticationManager = authenticationManager;
-    this.userDetailsService = userDetailsService;
-    this.jwtUtils = jwtUtils;
-  }
+public class AuthenticationService {
+    private final AuthenticationManager authenticationManager;
+    private final UserDetailsServiceImpl userDetailsService;
+    private final JwtUtils jwtUtils;
 
-  public String login(String username, String password) {
-    try {
-      authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
-    } catch (AuthenticationException e) {
-      throw new RuntimeException("Invalid username or password");
+    public String login(String username, String password) {
+        try {
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+        } catch (AuthenticationException e) {
+            throw new RuntimeException("Invalid username or password");
+        }
+        
+        UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+        return jwtUtils.generateToken(userDetails);
     }
-    
-    UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-    return jwtUtils.generateToken(userDetails);
-  }
 } 

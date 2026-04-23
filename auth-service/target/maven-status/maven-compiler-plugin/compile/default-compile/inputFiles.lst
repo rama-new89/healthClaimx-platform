@@ -1,5 +1,6 @@
 /workspaces/healthClaimx-platform/auth-service/src/main/java/com/healthclaimx/auth/entity/Role.java
 /workspaces/healthClaimx-platform/auth-service/src/main/java/com/healthclaimx/auth/service/AuthenticationService.java
+/workspaces/healthClaimx-platform/auth-service/src/main/java/com/healthclaimx/auth/service/UserDetailsServiceImpl.java
 /workspaces/healthClaimx-platform/auth-service/src/main/java/com/healthclaimx/auth/dto/LoginRequest.java
 /workspaces/healthClaimx-platform/auth-service/src/main/java/com/healthclaimx/auth/security/JwtService.java
 /workspaces/healthClaimx-platform/auth-service/src/main/java/com/healthclaimx/auth/security/ZoneValidationFilter.java

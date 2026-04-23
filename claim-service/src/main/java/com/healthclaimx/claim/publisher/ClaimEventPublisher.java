@@ -11,7 +11,7 @@ public class ClaimEventPublisher {
         this.publisher = publisher;
     }
     public void publishClaimCreatedEvent(Long claimId) {
-        ClaimCreatedEvent event = new ClaimCreatedEvent(claimId);
+        ClaimCreatedEvent event = new ClaimCreatedEvent(this, claimId);
         publisher.publishEvent(event);                                          
-}
+    }
 }

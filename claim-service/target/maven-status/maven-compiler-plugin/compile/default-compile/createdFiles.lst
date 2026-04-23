@@ -1,3 +1,9 @@
 com/healthclaimx/claim/controller/ClaimController.class
-com/healthclaimx/claim/entity/Claim.class
+com/healthclaimx/claim/event/ClaimCreatedEvent.class
+com/healthclaimx/claim/service/ClaimService.class
 com/healthclaimx/claim/ClaimServiceApplication.class
+com/healthclaimx/claim/config/EventConfig.class
+com/healthclaimx/claim/listener/ClaimEventListener.class
+com/healthclaimx/claim/repository/ClaimRepository.class
+com/healthclaimx/claim/entity/Claim.class
+com/healthclaimx/claim/publisher/ClaimEventPublisher.class

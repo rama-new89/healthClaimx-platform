@@ -1,4 +1,4 @@
-package com.healthclaimx.common.config;
+package com.healthclaimx.auth.config;
 
 import org.springframework.context.annotation.Configuration;
 import java.util.Arrays;

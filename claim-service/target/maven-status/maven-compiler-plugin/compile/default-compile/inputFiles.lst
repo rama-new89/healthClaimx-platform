@@ -1,3 +1,9 @@
 /workspaces/healthClaimx-platform/claim-service/src/main/java/com/healthclaimx/claim/controller/ClaimController.java
+/workspaces/healthClaimx-platform/claim-service/src/main/java/com/healthclaimx/claim/repository/ClaimRepository.java
 /workspaces/healthClaimx-platform/claim-service/src/main/java/com/healthclaimx/claim/ClaimServiceApplication.java
+/workspaces/healthClaimx-platform/claim-service/src/main/java/com/healthclaimx/claim/listener/ClaimEventListener.java
+/workspaces/healthClaimx-platform/claim-service/src/main/java/com/healthclaimx/claim/publisher/ClaimEventPublisher.java
 /workspaces/healthClaimx-platform/claim-service/src/main/java/com/healthclaimx/claim/entity/Claim.java
+/workspaces/healthClaimx-platform/claim-service/src/main/java/com/healthclaimx/claim/service/ClaimService.java
+/workspaces/healthClaimx-platform/claim-service/src/main/java/com/healthclaimx/claim/config/EventConfig.java
+/workspaces/healthClaimx-platform/claim-service/src/main/java/com/healthclaimx/claim/event/ClaimCreatedEvent.java
